@@ -1,0 +1,22 @@
+const accountId = 144553
+let accountEmail = "anish@google.com"
+var accountPassword = "12345"
+accountCity ="Jaipur"
+let accountState;
+//saare code ko node.js analysis kar raha hoga
+//accountId =2 //Not allowed 
+
+accountEmail = "hc@hc.com1" 
+accountPassword = 54321
+accountCity = "patna"
+
+console.log(accountId);
+
+//ek he Console se print krane me haam console.table usee karlete h
+
+/*
+  prefer Not To use var because of issue in block scope and Functional scope
+  */
+console.table([accountId,accountEmail,accountPassword,accountCity,accountState])
+
+
