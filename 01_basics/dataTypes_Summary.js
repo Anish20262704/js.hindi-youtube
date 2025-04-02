@@ -50,3 +50,39 @@ console.log(typeof myFunction);
 //Object aata h Basically usko Function object bolte h
 
 console.log(typeof anotherId);//yha pe typeof symbol symbol he aata ha
+
+
+/***********************memory Space dekhte h yha pe************************/
+//Memory allocation ke baare me dekhte h ye aage bhi kaam aayega and inteview ke liye bhi important h
+
+//memory is basicaaly of 2 Types -> Stack and Heap ye dono hota h
+
+//Stack(Primitive) , Heap(Non-Primitive)
+//jaab bhi Primitive ko define karega to wo Stack  me jata h and jaab Phir se define karte h to wha pe haamko Copy milta h naaa ke Original milta ha 
+//and wahi jaab Non-primitive ko  declare karta h to wha pe Heap me wo declare hota h wahi per jaab reDeclare karega to wo Original Position ka refernce he Dedeta h
+
+let myYoutubeName ="Anishkumardot.com"
+
+let anotherName =myYoutubeName
+anotherName ="chai aur code"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+
+let userOne ={
+       email:"user@google.com",
+       upi:"user@ybi"
+}
+
+let userTwo = userOne
+
+userTwo.email ="anish@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+//ye upper wala dono log ko print karo saamaj aa jayega Easily 
+
+
+
+
