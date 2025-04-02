@@ -1,3 +1,6 @@
+/****Conversion Operation****/
+// 1=>>>> Conversion h yha
+/* 
 let score ="33abc"
 let score2 =null
 let score3 =undefined
@@ -45,4 +48,54 @@ let stringNumber = String(someNumber)
 
 console.log(someNumber);
 console.log(typeof stringNumber);
+
+*/
+
+/**********OPERATIONS*********/
+//2=>>Operation h
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(2/3);
+// console.log(2%3);
+
+// let str1 = "hello" 
+// let str2 =" Bhai"
+
+// let str3 = str1+str2
+// console.log(str3);
+
+//problem kha aata h dekhte h
+/* tricky Conversion in J.S */
+
+// console.log("1"+2);
+// console.log(1+"2");
+// console.log("1"+"2");
+// console.log("1"+2 +2);
+// console.log(1+2+"2");
+
+//console.log(true);
+//console.log(+true);//aisa nhi karte h bad practice
+
+//coding ke andar readlibility bahut jarurat h isliye usspe Focus jada karn chaiye
+
+let num1,num2,num3
+
+num1 = num2 = num3 = 2+2 //yha readbility bahut kharab hogya h
+
+
+let gameCounter =100
+++gameCounter;
+console.log(gameCounter);
+
+// link to study
+// https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
+
+
+
+
+
 
