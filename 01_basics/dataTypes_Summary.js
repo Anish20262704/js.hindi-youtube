@@ -49,4 +49,4 @@ console.log(typeof outSidetemp);
 console.log(typeof myFunction);
 //Object aata h Basically usko Function object bolte h
 
-console.log(typeof anotherId);
+console.log(typeof anotherId);//yha pe typeof symbol symbol he aata ha
