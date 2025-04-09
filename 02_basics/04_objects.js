@@ -93,11 +93,11 @@ const {price} = course
 // JSON -API ke baare me dekhte h->Basically niche jo h Wo JSON ka Synatax h Jo API call karene ke baad aata h
 
 //yha niche API Object ke Format me milta h But kabhi kabhi Object ke Format me bhi Milta h
-   {
-    "name": "hitesh",
-    "coursename": "js in hindi",    //Synatax Perfect h
-    "price": "free"
-   }   
+//    {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",    //Synatax Perfect h
+//     "price": "free"
+//    }   
 
 //yha pe API hamara Array Ke form me Mila h
 
