@@ -45,8 +45,8 @@ if (Object.keys(emptyObj).length === 0) { //Object.keys(emptyObj) ye basically p
 
 let val1;
 //val1 = 5 ?? 10          // 5 assign ho jayega 
-//val1 = null ?? 10       // 10 assign ho jayega 
-//val1 = undefined ?? 15  //15 assign ho jayega 
+//val1 = null ?? 10       // 10 assign ho jayega  //basically program se null value aa rha h but haam chaate h ki null ko hata ke koi aur value assign kra de to iss saab chiz me NCOperator use karte h
+//val1 = undefined ?? 15  //15 assign ho jayega  
 //val1 = null ?? 10 ?? 20 //10 assign ho jayega 
 
 
