@@ -42,6 +42,8 @@ const myCoding = [
 ]
 
 myCoding.forEach( (item) => {
-    
     console.log(item.languageName);
 } )
+
+//simple syntax to learn arrow function syntax 
+myCoding.forEach( (item) => console.log(item.languageName)) //ek lone me likhna sikho arrow function ko
