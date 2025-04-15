@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chai aur code </title>
+
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    
+
+</body>
+
+<script>
+
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+
+  //attributes to kuch bhi ho sakta h to haam yha set kar skte h easily
+    
+    div.setAttribute("title", "generated title")
+
+     div.style.backgroundColor = "green"
+     div.style.padding = "12px"
+    // div.innerText = "Chai aur code With Anish"
+     //abhi tak jo bhi tum div bnaya h yo memory me save hua h usko attach to karo document ke sath 
+  
+     //yha easily haam khud ka ek node create kar ke append kardege 
+      const addText = document.createTextNode("Chai aur code")
+     div.appendChild(addText)
+   //finally hamara jo bhi div wala naya bna h usko aab document ke body me append kardena h
+  //dono tarike se kar skte h createtextNode aur innerText se haam addup kar skte h text element ko
+  document.body.appendChild(div)
+
+</script>
+
+</html>
