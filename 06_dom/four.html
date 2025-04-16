@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class="language">
+         <li>Javascript</li>
+    </ul>
+
+</body>
+
+<script>
+
+   //hamko script me ek aur list add karna using JS to wo karoo aab lekin agar single single karega to dikat hoga balki haam agar function se kardege to acha hoga jaab jaab function call karega turant addup ho jayega text
+   
+   //basic tarikka  kyuki haam yha .appendkar raeh h to haamko pura traverse karke last me jana hota h phir append karna paret h to isliye ye time taking hota h ...
+
+   function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    //haar baar jaab bhi function call utne baar pura tree traverse karega and last me jaa ke add karega 
+    
+    addLanguage("python")
+    addLanguage("typescript")
+
+//child he addkarna chahete h but optimize way me karna chate h to ye dekh lo
+//same kaam yha bhi kar rahe h lekin yha thoda optimize tarika se ho rha h yha haamko pura tree traverse nhi karna par rha h  kyuki appendwala child last me he attach hota h innerHTML se pura traverse hota h
+    
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage('golang')
+
+
+    // //Edit
+    //nth-child padh lena kaise use karte h 
+    const secondLang = document.querySelector("li:nth-child(2)")
+
+     console.log(secondLang);
+     //secondLang.innerHTML = "Mojo" lekin ye edit karne se optimize nhi hua h phir se innerHTML ke piche bhag gaye
+    
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo Bhai"
+    //replacewith karke bhi ek method hota h yha 
+    secondLang.replaceWith(newli)
+
+     //edit
+
+   //"yha pe kuch bhi tag daal ke select kar sakte ho"
+
+    const firstLang = document.querySelector("li:first-child")
+    //pura li:first-child ka HTML delete ho jayega using OuterHTML to haamko phir se li ko declare kar ke dena bhi parega 
+    firstLang.outerHTML = '<li>TypeScriptNew</li>'
+
+    // remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+
+</script>
+
+</html>
