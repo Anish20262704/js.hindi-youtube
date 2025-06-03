@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+
+    <h2>Amazing image</h2>
+
+    <div>
+
+        <ul id="images">
+
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+
+   </div>
+
+</body>
+  
+<script>
+
+//ye method me koi galti nhi h But ye method Thoda Features Kaam Deta h to iss liye hum thoda kuch alag method use karte h yha pe
+//humko Element ko getElementById se lena he hoga iske alawa koi upaye nhi h .....Aur ek chiz aur yha modern technique me hum EVENT LISTNER USE Karte h 
+    
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    //modern Method
+
+//    document.getElementById('owl').addEventListener('click', function(){
+//          console.log("owl clicked Again");
+//          alert("owl clicked Again")
+//     }, false);  
+    //yha 3rd parameter by default false he hota h to likho ya nhi likho koi farak nhi parta h 
+    
+
+     // attachEvent()// another method-> ye method Early TIme me kaam aata tha 
+     // jQuery - on  // another method -> yha is me sirf.on lga ke kaam ban jata tha 
+     
+   //YE KUCH EVENT KE BAARE ME HUMKO KHUD SE PADHNA PAREGA JO KI IMPORTANT H USE AAYEGA ACHA SE
+    
+    // type->LIKE mouse ,keyboard me type ka event hota h , timestamp,defaultPrevented
+    // target, toElement, srcElement->BAHUT IMP., currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //e -> event object hota h
+
+
+    //EVENT PROPOGATION
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+
+//yha ek interesting things dekhte h basically yha owl per click karge to ul wala console and owl clicked wala console dono print hona chaiyee lekin kaun pahale hoga ye dkehte h 
+   //->answer -> pahale owl wala clicked hoga then ul wala print hoga kyuki yha bubbling wala concept use hota h mtlb upper se niche jata h flow
+   
+//    document.getElementById('owl').addEventListener('click', function(e){
+//         console.log("owl clicked");
+//         //to stop Bubbling event mtlb event bubble hoke upper ke event per nhi jayega
+//         e.stopPropagation()
+//     }, false)
+    
+   //yha e mtlb -> hum event ko e me capture karliye h e me saara event ka type/method aa jata h 
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     //to stop bubbling event to stopProgation() se karna parega
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+    //ek chhota sa project wala kaam karte h yha pe ->  jaab bhi hum koi bhi image per click kare to wo gayab ho jaye
+
+  document.querySelector('#images').addEventListener('click', function(e){
+       
+        console.log(e.target.tagName);
+        //1st method
+
+        // let removeIt = e.target.parentNode
+        //  removeIt.remove()
+
+       //2 nd method
+      //IMG is liye kar rahe h ki agar hum sirf google per click karte to wha se wo ul ko select kar ke pura delete kar deta but humko sirf image ko he remove karna h na 
+       
+      if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    })
+    
+    // //removeIt.parentNode.removeChild(removeIt)  ye alag chiz h ye upper wale se interlinked nhi alag se samaj lena 
+
+
+</script>
+
+
+
+</html>
