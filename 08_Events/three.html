@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>Chai aur javaScript</h1>
+       <button id="start">START</button>
+       <button id="stop">STOP</button>
+</body>
+    <script>
+     
+    //  setInterval(function(){
+
+    //       const time = new Date().toLocaleTimeString();
+    //       console.log("Current Time:", time);
+    //       console.log("Anish")
+
+    //  },2000)
+
+     //ye simple ek function  likhe h hum
+
+    //   const sayDate = function(str){
+    //      console.log(str, Date.now());
+    //    }
+       
+
+     // const intervalId = setInterval(sayDate, 1000, "hi")
+      
+    //   clearInterval(intervalId)
+
+    //yha niche hum ek aisa project bnana chaa raeh h ki jaab start click kare to setinterval call ho jaye and jaab stop click kare to clearinterval call ho jayee
+
+
+      let intervalId = null ; // ✅ global scope variable
+
+    const sayDate = function (str) {
+      console.log(str, new Date().toLocaleTimeString());
+    }
+
+    
+    document.querySelector('#start').addEventListener('click', function () {
+
+      if (!intervalId) { // Prevent multiple intervals
+           intervalId =  setInterval(sayDate, 1000, "Hello");
+           console.log("Interval Started");
+      }
+
+    });
+
+    document.querySelector('#stop').addEventListener('click', function () {
+      clearInterval(intervalId);
+      intervalId = null; // Reset so we can start again later
+      console.log("Interval Stopped");
+    });
+
+
+    </script>
+</html>
